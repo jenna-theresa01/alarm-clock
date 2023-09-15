@@ -1,7 +1,25 @@
 // CREATE an alarm clock
 
 // START 
-// SET VARS
+// funtction to convert time to string value
+const getTimeString = ({hours, minutes, seconds}) => {
+    if (minutes / 10 < 1) {
+        minutes = "0" + minutes; 
+    }
+    if (seconds / 10 < 1) {
+        seconds = "0" + seconds;
+    }
+    return `${hours}:${minutes}:${seconds}`
+};
+
+// Function to display current time on screen
+const renderTime = () => {
+    let currentTime = document.getElementById("current-time");
+    const currentDate = new Date ();
+    
+
+}
+
 // Date obj - epach
 let currentTimeInt = newDate().getTime(); // this is an integer
 
