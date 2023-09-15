@@ -1,7 +1,12 @@
 // CREATE an alarm clock
 
 // START 
-// funtction to convert time to string value
+// Show current time
+let today = new Date ();
+let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+console.log(time);
+
+// function to convert time to string value
 const getTimeString = ({hours, minutes, seconds}) => {
     if (minutes / 10 < 1) {
         minutes = "0" + minutes; 
@@ -28,7 +33,7 @@ const renderTime = () => {
 }
     // use setInterval to capture each second 
     setInterval(renderTime, 1000);
-    
+
 // Date obj - epach
 let currentTimeInt = newDate().getTime(); // this is an integer
 
