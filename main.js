@@ -53,3 +53,39 @@ window.addEventListener("load", onLoadFunction);
 
 
 // Scratchpad
+// when we need a variable created
+let someStrExample = "";
+let someArrayExample = [];
+let someObjExample = {};
+let someBooleExample = false; // true until it is false
+
+// integers
+let someIntExample = 2;
+let currentTimeIntExample = new Date().getTime();
+// an integer
+
+// loops
+for(let i = 0; i < 20; i++){
+    // do stuff here
+}
+while (somethingTruthy){
+    // do something here
+}
+
+// functions
+function someFunctionNameExample (param1) {
+    // do something here
+    // do you need to return something? 
+}
+
+let someOtherFunctionExample = (param1) => {
+    // do something here
+    // Start, declare vars
+    // what does the function do? 
+    // do you need to return something?
+}
+
+let myFunctionExample = function(param1) {
+    // do something
+    // do I need to return something
+}
