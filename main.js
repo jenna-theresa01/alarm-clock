@@ -1,15 +1,41 @@
 // CREATE an alarm clock
 
 // START 
-// SET VARS
+// funtction to convert time to string value
+const getTimeString = ({hours, minutes, seconds}) => {
+    if (minutes / 10 < 1) {
+        minutes = "0" + minutes; 
+    }
+    if (seconds / 10 < 1) {
+        seconds = "0" + seconds;
+    }
+    return `${hours}:${minutes}:${seconds}`
+};
+
+// Function to display current time on screen
+const renderTime = () => {
+    let currentTime = document.getElementById("current-time");
+    const currentDate = new Date ();
+    let hours = currentDate.getHours ();
+    let minutes = currentDate.getMinutes ();
+    let seconds = currentDate.getSeconds ();
+    if (hours > 24) {
+        hours = hours % 24;
+    }
+    const timeString = getTimeString({hours, minutes, seconds});
+    currentTime.innerHTML = timeString;
+
+}
+    // use setInterval to capture each second 
+    setInterval(renderTime, 1000);
+    
 // Date obj - epach
 let currentTimeInt = newDate().getTime(); // this is an integer
 
 function onLoadFunction (event){
     console.log(event);
     // this code executes when the window.onload event happens
-    // use setInterval to capture rach second 
-    setInterval(setTimer, 1000);
+
 }
 
 // when the setInterval is invoked
